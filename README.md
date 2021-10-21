@@ -15,7 +15,7 @@ In the project folder I created the "/src/" folder, where I  created the main fi
 
 Running "node src/app.js", the result of the ramda code is [ 46, 15, 0 ].
 
-My next step is to analyze the code.
+My next step is to analyze the code, wich uses currying, a concept I need to research further.
 
 Analyzing the code:
 
