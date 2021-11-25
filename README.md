@@ -15,10 +15,24 @@ In the project folder I created the "/src/" folder, where I  created the main fi
 
 Running "node src/app.js", the result of the ramda code is [ 46, 15, 0 ].
 
-My next step is to analyze the code, wich uses currying, a concept I need to research further.
-
 
 Analyzing the code:
 R.reduce((acc,x) => R.compose(R.flip(R.prepend)(acc), R.sum,R.map(R.add(1)))([x,...acc]), [0])([13, 28]);
+
+#Reorganizing the code:
+
+`
+myNumbers = [13,28];
+
+const reduceUsedFunction = (acc,x) => 
+  R.compose(
+    R.flip(R.prepend)(acc),
+    R.sum,
+    R.map(R.add(1))
+  );
+  
+R.reduce(reduceUsedFunction([x, ...acc]), [0])(myNumbers)
+
+`
 
 
