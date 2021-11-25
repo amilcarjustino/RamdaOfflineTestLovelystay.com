@@ -31,7 +31,7 @@ const reduceUsedFunction = (acc,x) =>
     R.map(R.add(1))
   );
   
-R.reduce(reduceUsedFunction([x, ...acc]), [0])(myNumbers)`
+R.reduce(reduceUsedFunction([x, ...acc]), [0])(myNumbers) `
 
 For each value of the array, in this case 13 and 28, the reduce function will apply the reduceUsedFunction;
 
